@@ -64,6 +64,9 @@ snippet once "Include header once only guard"
 if not snip.c:
 	import string
 	snip.rv = re.sub(r'[^A-Za-z0-9]+','_', path).upper()
+	i = snip.rv.find("_SRC_")
+	if i != -1:
+		snip.rv = snip.rv[i+5:]
 else:
 	snip.rv = snip.c`}_
 #define TAJGA_$1_
