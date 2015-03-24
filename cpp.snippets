@@ -7,6 +7,16 @@ priority -49
 snippet Inc "#include <...>"
 #include <${1:iostream}>
 endsnippet
+snippet inc "#include"
+#include "${1:`!p
+if not snip.c:
+	snip.rv = (os.path.splitext(path)[0]).replace('\\','/')
+	i = snip.rv.find("/src/")
+	if i != -1:
+		snip.rv = snip.rv[i+5:]
+else:
+	snip.rv = snip.c`}.h"
+endsnippet
 snippet once "Include header once only guard"
 #ifndef TAJGA_${1:`!p
 if not snip.c:
