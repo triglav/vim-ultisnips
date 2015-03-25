@@ -53,16 +53,16 @@ snippet list "std::list"
 std::list<${1:T}> ${2:name};
 endsnippet
 snippet up "std::unique_ptr"
-std::unique_ptr<${1:T}> ${2:name};
+std::unique_ptr<${1:${VISUAL:T}}>
 endsnippet
 snippet sp "std::shared_ptr"
-std::shared_ptr<${1:T}> ${2:name};
+std::shared_ptr<${1:${VISUAL:T}}>
 endsnippet
 snippet mu "std::make_unique"
-std::make_unique<${1:T}>(${2})
+std::make_unique<${1:${VISUAL:T}}>
 endsnippet
 snippet ms "std::make_shared"
-std::make_shared<${1:T}>(${2})
+std::make_shared<${1:${VISUAL:T}}>
 endsnippet
 snippet ns "namespace"
 namespace ${1:tajga} {
