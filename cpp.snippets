@@ -85,6 +85,13 @@ private:
 ${0}
 }; // class $1
 endsnippet
+snippet iface "interface"
+class ${1:`!p snip.rv = ''.join(x for x in snip.basename.title() if x.isalnum()) or "UNTITLED"`} {
+public:
+	virtual ~$1() = default;
+${0}
+}; // class $1
+endsnippet
 snippet st "struct"
 struct ${1:`!p snip.rv = ''.join(x for x in snip.basename.title() if x.isalnum()) or "UNTITLED"`} {
 	${0:// data}
